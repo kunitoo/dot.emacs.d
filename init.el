@@ -24,3 +24,6 @@
 	    (normal-top-level-add-subdirs-to-load-path))))))
 ;; 引数のディレクトリとそのサブディレクトリをload-pathを追加
 (add-to-load-path "elisp" "conf" "public_repos")
+;; 文字コードを指定
+(set-language-environment "Japanese")
+(prefer-coding-system 'utf-8)
