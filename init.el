@@ -1,2 +1,2 @@
 ;; Control + h でバックスペース
-(global-set-key "\C-h" 'delete-backward-char)
+(global-set-key (kbd "C-h") 'delete-backward-char)
