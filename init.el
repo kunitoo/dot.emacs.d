@@ -4,6 +4,8 @@
 (global-set-key (kbd "C-t") 'other-window)
 ;; Emacs からの質問をy/nで回答する
 (fset 'yes-or-no-p 'y-or-n-p)
+;; スタートアップメッセージを非表示
+(setq inhibit-startup-screen t)
 ;; load_path を追加する関数を定義
 (defun add-to-load-path (&rest paths)
   (let (path)
