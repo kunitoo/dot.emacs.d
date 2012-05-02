@@ -1,4 +1,6 @@
+*.elc
 session.*
 auto-save-list
-*.elc
-
+elpa
+elisp
+url
