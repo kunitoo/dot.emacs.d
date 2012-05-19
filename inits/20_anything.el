@@ -36,3 +36,20 @@
 (when (require 'descbinds-anything nil t)
   ;; describe-bindingsをAnythingに置き換える
   (descbinds-anything-install))
+
+;; anything-c-moccurの設定
+; color-moccurが必要
+; (install-elisp "http://emacswiki.org/emacs/download/color-moccur.el")
+; (install-elisp "http://coderepos.org/share/export/30884/lang/elisp/anything-c-moccur/trunk/anything-c-moccur.el")
+(when (require 'anything-c-moccur nil t)
+  (setq
+   ;; anything-c-moccur用 anything-idle-delay
+   anything-c-moccur-anything-idle-delay 0.1
+   ;; バッファの情報をハイライトする
+   anything-c-moccur-higligt-info-line-flag t
+   ;; 現在選択中の候補の位置をほかのwindowに表示する
+   anything-c-moccur-enable-auto-look-flag t
+   ;; 起動時にポイントの位置の単語を初期パターンにする
+   anything-c-moccur-enable-initial-pattern t)
+  ;; C-M-oにanything-c-moccur-occur-by-moccurを割り当てる
+  (global-set-key (kbd "C-M-o")  'anything-c-moccur-occur-by-moccur))
