@@ -8,7 +8,7 @@
 	(if (fboundp 'normal-top-level-add-subdirs-to-load-path)
 	    (normal-top-level-add-subdirs-to-load-path))))))
 ;; 引数のディレクトリとそのサブディレクトリをload-pathを追加
-(add-to-load-path "elisp" "conf" "public_repos")
+(add-to-load-path "elisp" "conf" "public_repos" "elpa")
 ;; init-loader.el
 ; (install-elisp "http://coderepos.org/share/export/39139/lang/elisp/init-loader/init-loader.el")
 (require 'init-loader)
